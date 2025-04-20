@@ -18,7 +18,7 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  gap: 15vh;
+  gap: 16vh;
 }
 #cenario h1 {
   font-size: 80px;
@@ -34,7 +34,7 @@
 #cenario #aceleria {
   position: fixed; /* Posição fixa na tela */
   position: fixed;
-  width: 7vw; /* Pode ajustar o tamanho */
+  width: 15vh; /* Pode ajustar o tamanho */
   height: auto;
   left: 0;
   top: 0;

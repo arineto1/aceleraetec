@@ -14,32 +14,117 @@
   background-image: url(../imagens/cenario1-cinza.jpg);
   background-size: cover;
   padding: 10vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 15vh;
 }
 #cenario h1 {
   font-size: 80px;
   font-family: cuphead;
-  color: #b3552f;  
+  color: #b3552f;
   -webkit-text-stroke-width: 4px; /* largura da borda */
   -webkit-text-stroke-color: black; /* cor da borda */
   text-align: center;
 }
+#cenario h1:hover{
+    color: #42c920;
+}
 #cenario #aceleria {
   position: fixed; /* Posição fixa na tela */
-  width: 100px; /* Defina a largura desejada */
-  height: auto; /* Mantém a proporção */
-  border-radius: 50%; /* Opcional: deixa a imagem redonda */
-
-  /* Ponto inicial (será sobrescrito pelo JS) */
+  position: fixed;
+  width: 7vw; /* Pode ajustar o tamanho */
+  height: auto;
   left: 0;
   top: 0;
+  pointer-events: none; /* Mantém essencial */
+  transition: transform 0.05s linear; /* Transição rápida para a imagem principal */
+  z-index: 10000; /* Garante que a imagem principal fique sobre o rastro */
+  /* Opcional: filtro para um brilho tecnológico */
+  filter: drop-shadow(0 0 5px #42c920);
+}
 
-  /* Importante: Evita que a imagem bloqueie eventos do mouse */
-  pointer-events: none;
+/* Estilo para cada ponto do rastro */
+.rastro {
+  position: fixed; /* Essencial para posicionar com JS */
+  pointer-events: none; /* Essencial */
+  width: 10px; /* Tamanho do ponto do rastro */
+  height: 10px; /* Tamanho do ponto do rastro */
+  background-color: #42c920; /* Cor Ciano (bem tecnológica) */
+  border-radius: 40%; /* Faz o ponto ser um círculo */
+  z-index: 9999; /* Abaixo da imagem principal */
 
-  /* Opcional: Transição suave */
-  /* Movendo usando transform é mais performático */
-  transition: transform 0.1s linear; /* Ajuste o tempo e a função de easing como desejar */
+  /* Animação: nome, duração, timing-function, fill-mode */
+  animation: fadeOut 30s linear forwards;
+  /* 'forwards' mantém o estado final da animação (invisível) */
 
-  /* Opcional: Garante que a imagem fique acima de outros elementos */
-  z-index: 9999;
+  /* Opcional: um pequeno brilho para os pontos do rastro */
+  box-shadow: 0 0 8px #42c920;
+}
+
+/* Definição da animação de desaparecimento */
+@keyframes fadeOut {
+  from {
+    opacity: 0.8; /* Começa semi-visível */
+    transform: scale(1); /* Tamanho normal */
+  }
+  to {
+    opacity: 0; /* Termina invisível */
+    transform: scale(0.2); /* Encolhe um pouco ao sumir */
+  }
+}
+
+/* PARTE DO BOTÃO */
+.cuphead-button {
+  padding: 15px 30px; /* Espaçamento interno */
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold;
+  color: #fefefe; /* Cor do texto (branco ou creme claro) */
+  background-color: #b3552f; /* Cor de fundo vibrante (vermelho/laranja) */
+  border: 6px solid #212121; /* Contorno grosso preto */
+  border-radius: 10px; /* Bordas levemente arredondadas */
+  text-transform: uppercase; /* Texto em maiúsculas */
+  text-shadow: 2px 2px #212121; /* Sombra no texto para destaque */
+  box-shadow: 4px 4px #212121; /* Sombra no botão para profundidade */
+  cursor: pointer; /* Mudar cursor para indicar interatividade */
+  transition: all 0.1s ease; /* Transição suave para efeitos de hover/active */
+  position: relative; /* Necessário para possíveis pseudo-elementos */
+  overflow: hidden; /* Esconder qualquer excesso de pseudo-elementos */
+  font-family: cuphead;
+  -webkit-text-stroke-width: 0.5px; /* largura da borda */
+  -webkit-text-stroke-color: black; /* cor da borda */
+}
+
+/* Efeito ao passar o mouse */
+.cuphead-button:hover {
+  background-color: #42c920; /* Cor de fundo levemente diferente no hover */
+  box-shadow: 6px 6px #212121; /* Aumentar sombra */
+  transform: translate(-2px, -2px); /* Mover levemente para simular "salto" */
+}
+
+/* Efeito ao clicar */
+.cuphead-button:active {
+  background-color: #d44a2a; /* Cor de fundo mais escura ao clicar */
+  box-shadow: 2px 2px #212121; /* Diminuir sombra */
+  transform: translate(
+    2px,
+    2px
+  ); /* Mover na direção oposta para simular "afundar" */
+}
+
+/* Opcional: Adicionar um contorno interno irregular para mais charme */
+.cuphead-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Contorno interno claro */
+  border-radius: 8px; /* Ajustar border-radius */
+  opacity: 0.8;
+  pointer-events: none; /* Ignorar eventos de mouse */
+  /* Para simular irregularidade, isso é mais complexo com CSS puro.
+       Poderia-se usar um SVG ou imagem aqui para maior fidelidade. */
 }

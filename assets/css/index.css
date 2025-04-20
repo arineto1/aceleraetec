@@ -1,0 +1,45 @@
+@font-face {
+  font-family: cuphead;
+  src: url(../fonts/Marimpa.otf);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#cenario {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../imagens/cenario1-cinza.jpg);
+  background-size: cover;
+  padding: 10vh;
+}
+#cenario h1 {
+  font-size: 80px;
+  font-family: cuphead;
+  color: #b3552f;  
+  -webkit-text-stroke-width: 4px; /* largura da borda */
+  -webkit-text-stroke-color: black; /* cor da borda */
+  text-align: center;
+}
+#cenario #aceleria {
+  position: fixed; /* Posição fixa na tela */
+  width: 100px; /* Defina a largura desejada */
+  height: auto; /* Mantém a proporção */
+  border-radius: 50%; /* Opcional: deixa a imagem redonda */
+
+  /* Ponto inicial (será sobrescrito pelo JS) */
+  left: 0;
+  top: 0;
+
+  /* Importante: Evita que a imagem bloqueie eventos do mouse */
+  pointer-events: none;
+
+  /* Opcional: Transição suave */
+  /* Movendo usando transform é mais performático */
+  transition: transform 0.1s linear; /* Ajuste o tempo e a função de easing como desejar */
+
+  /* Opcional: Garante que a imagem fique acima de outros elementos */
+  z-index: 9999;
+}

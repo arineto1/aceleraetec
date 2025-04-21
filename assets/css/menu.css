@@ -130,3 +130,12 @@
   /* Para simular irregularidade, isso é mais complexo com CSS puro.
        Poderia-se usar um SVG ou imagem aqui para maior fidelidade. */
 }
+
+/* RESPONSIVIDADE */
+
+@media (width < 500px) {
+  .cuphead-button {
+       width: 90vw;
+   
+  }
+}

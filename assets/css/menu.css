@@ -11,14 +11,14 @@
 #cenario {
   height: 100vh;
   width: 100vw;
-  background-image: url(../imagens/cenario1.jpg);
+  background-image: url(../imagens/cenario2.jpg);
   background-size: cover;
-  padding: 10vh;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  gap: 16vh;
+  gap: 5vh;
+  padding-top: 10vh;
 }
 #cenario h1 {
   font-size: 80px;
@@ -94,6 +94,8 @@
   font-family: cuphead;
   -webkit-text-stroke-width: 0.5px; /* largura da borda */
   -webkit-text-stroke-color: black; /* cor da borda */
+  width: 35vw;
+  height: 15vh;
 }
 
 /* Efeito ao passar o mouse */

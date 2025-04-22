@@ -6,7 +6,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  cursor: pointer;
+  cursor: none;
 }
 #cenario {
   height: 100vh;
@@ -18,15 +18,26 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  gap: 16vh;
+  gap: 10vh;
 }
 #cenario h1 {
   font-size: 80px;
   font-family: cuphead;
-  color: #b3552f;
-  -webkit-text-stroke-width: 4px; /* largura da borda */
+  color: #d44a2a;
+  -webkit-text-stroke-width: 2.5px; /* largura da borda */
   -webkit-text-stroke-color: black; /* cor da borda */
   text-align: center;
+}
+#cenario h1 #subtitulo {
+  font-size: 50px;
+  font-family: cuphead;
+  color: #d44a2a;
+  -webkit-text-stroke-width: 2px; /* largura da borda */
+  -webkit-text-stroke-color: black; /* cor da borda */
+  text-align: center;
+}
+#cenario h1 .cor {
+    color: #02567d;
 }
 #cenario h1:hover{
     color: #42c920;
@@ -81,13 +92,12 @@
   font-size: 24px; /* Tamanho da fonte */
   font-weight: bold;
   color: #fefefe; /* Cor do texto (branco ou creme claro) */
-  background-color: #b3552f; /* Cor de fundo vibrante (vermelho/laranja) */
+  background-color: #d44a2a; /* Cor de fundo vibrante (vermelho/laranja) */
   border: 6px solid #212121; /* Contorno grosso preto */
   border-radius: 10px; /* Bordas levemente arredondadas */
   text-transform: uppercase; /* Texto em maiúsculas */
   text-shadow: 2px 2px #212121; /* Sombra no texto para destaque */
   box-shadow: 4px 4px #212121; /* Sombra no botão para profundidade */
-  cursor: pointer; /* Mudar cursor para indicar interatividade */
   transition: all 0.1s ease; /* Transição suave para efeitos de hover/active */
   position: relative; /* Necessário para possíveis pseudo-elementos */
   overflow: hidden; /* Esconder qualquer excesso de pseudo-elementos */

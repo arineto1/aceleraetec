@@ -14,7 +14,7 @@ window.addEventListener('mousemove', (event) => {
   // Centralizar a imagem no cursor (ajuste se necessário)
   const offsetX = imagemPrincipal.offsetWidth / 2
   const offsetY = imagemPrincipal.offsetHeight / 2
-  imagemPrincipal.style.transform = `translate(${x - 150}px, ${
+  imagemPrincipal.style.transform = `translate(${x - 80}px, ${
     y - offsetY
   }px)`
 
@@ -35,7 +35,7 @@ function criarElementoRastro(x, y) {
   // Posiciona o centro do rastro onde o cursor estava
   // Usa o tamanho definido no CSS para calcular o offset
   const tamanhoRastro = 15 // Deve ser igual ao width/height no CSS
-  rastro.style.left = `${x - 110}px`
+  rastro.style.left = `${x - 80}px`
   rastro.style.top = `${y - tamanhoRastro / 2}px`
 
   // Adiciona o elemento rastro ao corpo do documento

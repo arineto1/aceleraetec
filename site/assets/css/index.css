@@ -6,27 +6,38 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  cursor: none;
+  cursor: pointer;
 }
 #cenario {
   height: 100vh;
   width: 100vw;
-  background-image: url(../imagens/cenario2.jpg);
+  background-image: url(../imagens/cenario01.jpg);
   background-size: cover;
+  padding: 10vh;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  gap: 5vh;
-  padding-top: 10vh;
+  gap: 10vh;
 }
 #cenario h1 {
-  font-size: 90px;
+  font-size: 80px;
   font-family: cuphead;
   color: #d44a2a;
-  -webkit-text-stroke-width: 1.5px; /* largura da borda */
+  -webkit-text-stroke-width: 2.5px; /* largura da borda */
   -webkit-text-stroke-color: black; /* cor da borda */
   text-align: center;
+}
+#cenario h1 #subtitulo {
+  font-size: 50px;
+  font-family: cuphead;
+  color: #d44a2a;
+  -webkit-text-stroke-width: 2px; /* largura da borda */
+  -webkit-text-stroke-color: black; /* cor da borda */
+  text-align: center;
+}
+#cenario h1 .cor {
+    color: #02567d;
 }
 #cenario h1:hover{
     color: #42c920;
@@ -87,15 +98,12 @@
   text-transform: uppercase; /* Texto em maiúsculas */
   text-shadow: 2px 2px #212121; /* Sombra no texto para destaque */
   box-shadow: 4px 4px #212121; /* Sombra no botão para profundidade */
-  /* Mudar cursor para indicar interatividade */
   transition: all 0.1s ease; /* Transição suave para efeitos de hover/active */
   position: relative; /* Necessário para possíveis pseudo-elementos */
   overflow: hidden; /* Esconder qualquer excesso de pseudo-elementos */
   font-family: cuphead;
   -webkit-text-stroke-width: 0.5px; /* largura da borda */
   -webkit-text-stroke-color: black; /* cor da borda */
-  width: 35vw;
-  height: 15vh;
 }
 
 /* Efeito ao passar o mouse */
@@ -129,13 +137,4 @@
   pointer-events: none; /* Ignorar eventos de mouse */
   /* Para simular irregularidade, isso é mais complexo com CSS puro.
        Poderia-se usar um SVG ou imagem aqui para maior fidelidade. */
-}
-
-/* RESPONSIVIDADE */
-
-@media (width < 500px) {
-  .cuphead-button {
-       width: 90vw;
-   
-  }
 }
